@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE faq SYSTEM "./faq.dtd" >
+<faq>
+	<item q="What is CUPS?">
+		The Common Unix Printing System (CUPS) is an open source tool.
+	</item>
+	<item q="What printer connections are supported?">
+		Printers are attached using any of the following methods:
+		<nl>
+			<li>Parallel Port (LPT:)</li>
+			<li>Universal Serial Port (USB:)</li>
+			<li>Internet Printing Protocol (IPP:)</li>
+			<li>Windows SMB/CIFS Printer Sharing</li>
+		</nl>
+	</item>
+	<item q="How is CUPS installed?">
+		<p>
+			Oracle Enterprise Linux includes the following RPM packages.
+			All packages within the group must be installed.
+		</p>
+		<ul>
+			<li>cups</li>
+			<li>cups-libs</li>
+			<li>hal-cups-libs</li>
+			<li>libgnomecups*</li>
+		</ul>
+		<p>
+			* The libgnomecups package is optional and is needed only if the GNOME X11 system is installed.
+		</p>
+		<p>
+			You may install these packages from the OEL installation media or from the Oracle Unbreakable Linux Network (ULN) via the up2date utility.
+		</p>
+	</item>
+	<item q="How is CUPS started?">
+		<p>
+			CUPS runs as a daemon process.
+			It is usually started at system boot time.
+			To enable CUPS to start on the next system boot, run this command as root:
+		</p>
+		<code>
+# /sbin/chkconfig cups on
+		</code>
+		<p>
+			To start the CUPS daemon immediately, run this command as root:
+		</p>
+		<code>
+# /sbin/service cups start
+		</code>
+	</item>
+	<item q="Does CUPS work with system-config-printer?">
+		yes
+	</item>
+</faq>

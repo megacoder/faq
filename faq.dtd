@@ -1,0 +1,9 @@
+<!ELEMENT	faq			(item*)				>
+<!ELEMENT	item			(#PCDATA|br|ul|nl|p|code)*	>
+<!ATTLIST	item	q	CDATA	#REQUIRED			>
+<!ELEMENT	br			EMPTY				>
+<!ELEMENT	ul			(li*)				>
+<!ELEMENT	nl			(li*)				>
+<!ELEMENT	li			(#PCDATA|ul|nl)*		>
+<!ELEMENT	p			(#PCDATA|p|br)*			>
+<!ELEMENT	code			(#PCDATA)			>
